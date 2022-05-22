@@ -2,10 +2,12 @@ Introduction
 ============
 
 
-Install package: 
+Install package:
+
 .. code-block:: shell
 
     python -m pip install .
+
 
 
 Usage
