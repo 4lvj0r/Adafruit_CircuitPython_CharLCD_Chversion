@@ -17,7 +17,7 @@ i2c = board.I2C()  # uses board.SCL and board.SDA
 lcd = character_lcd.Character_LCD_RGB_I2C(i2c, lcd_columns, lcd_rows)
 
 lcd.clear()
-lcd.color = [100, 0, 0]
+lcd.color = [100, 0, 0, 100]
 while True:
     if lcd.left_button:
         print("Left!")
@@ -42,3 +42,4 @@ while True:
     else:
         time.sleep(0.1)
         lcd.clear()
+        lcd.color = [100, 0, 0, 0]

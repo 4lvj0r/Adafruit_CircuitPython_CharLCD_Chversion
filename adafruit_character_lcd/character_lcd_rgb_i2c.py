@@ -92,17 +92,18 @@ class Character_LCD_RGB_I2C(Character_LCD_RGB):
             pin.switch_to_input(pull=digitalio.Pull.UP)
 
         super().__init__(
-            mcp.get_pin(15),
-            mcp.get_pin(13),
-            mcp.get_pin(12),
-            mcp.get_pin(11),
-            mcp.get_pin(10),
-            mcp.get_pin(9),
+            mcp.get_pin(15),  # rs
+            mcp.get_pin(13),  # en
+            mcp.get_pin(12),  # db4
+            mcp.get_pin(11),  # db5
+            mcp.get_pin(10),  # db6
+            mcp.get_pin(9),  # db7
             columns,
             lines,
-            mcp.get_pin(6),
-            mcp.get_pin(7),
-            mcp.get_pin(8),
+            mcp.get_pin(6),  # red
+            mcp.get_pin(7),  # green
+            mcp.get_pin(8),  # blue
+            mcp.get_pin(5),  # background light
             mcp.get_pin(14),
         )
 

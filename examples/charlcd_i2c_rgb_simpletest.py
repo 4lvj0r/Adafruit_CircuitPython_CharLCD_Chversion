@@ -18,20 +18,20 @@ lcd = character_lcd.Character_LCD_RGB_I2C(i2c, lcd_columns, lcd_rows)
 
 lcd.clear()
 # Set LCD color to red
-lcd.color = [100, 0, 0]
+lcd.color = [100, 0, 0, 100]
 time.sleep(1)
 # Print two line message
 lcd.message = "Hello\nCircuitPython"
 # Wait 5s
 time.sleep(5)
 # Set LCD color to blue
-lcd.color = [0, 100, 0]
+lcd.color = [0, 100, 0, 100]
 time.sleep(1)
 # Set LCD color to green
-lcd.color = [0, 0, 100]
+lcd.color = [0, 0, 100, 100]
 time.sleep(1)
 # Set LCD color to purple
-lcd.color = [50, 0, 50]
+lcd.color = [50, 0, 50, 100]
 time.sleep(1)
 lcd.clear()
 # Print two line message right to left
@@ -67,5 +67,5 @@ time.sleep(1)
 lcd.message = "Going to sleep\nCya later!"
 time.sleep(5)
 # Turn off LCD backlights and clear text
-lcd.color = [0, 0, 0]
+lcd.color = [0, 0, 0, 0]
 lcd.clear()

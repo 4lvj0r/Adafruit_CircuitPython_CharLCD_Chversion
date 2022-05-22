@@ -197,7 +197,8 @@ class Character_LCD:
         if isinstance(enable, bool):
             self._column_align = enable
         else:
-            raise ValueError("The column_align value must be either True or False")
+            raise ValueError(
+                "The column_align value must be either True or False")
 
     @property
     def cursor(self):
@@ -635,6 +636,7 @@ class Character_LCD_RGB(Character_LCD):
         red,
         green,
         blue,
+        bgl,    # bgl = backgroundlight added to the list / pin it's in i2c_rgb
         read_write=None,
     ):
 
@@ -646,7 +648,8 @@ class Character_LCD_RGB(Character_LCD):
             self.read_write.direction = digitalio.Direction.OUTPUT
 
         # define color params
-        self.rgb_led = [red, green, blue]
+        # added fouth parameter for the background light
+        self.rgb_led = [red, green, blue, bgl]
 
         for pin in self.rgb_led:
             if hasattr(pin, "direction"):
